@@ -1778,6 +1778,18 @@
 			"value" : "1500"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_GLM",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding GLM"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/local/include][v()]"
+		},
+		{
 			"name" : "GITCOMMAND",
 			"properties" : 
 			[
@@ -1792,6 +1804,18 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "/usr/bin/git"
+		},
+		{
+			"name" : "GLM_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/local/include"
 		},
 		{
 			"name" : "HGCOMMAND",
