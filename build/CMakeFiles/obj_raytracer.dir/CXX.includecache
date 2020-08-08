@@ -11,10 +11,12 @@ iostream
 -
 fstream
 -
-../src/vec3.h
-/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/vec3.h
+chrono
+-
+../src/math.hpp
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.hpp
 
-/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/vec3.h
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.hpp
 iostream
 -
 ../include/glm/glm.hpp

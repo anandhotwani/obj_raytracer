@@ -547,6 +547,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/math.o: src/math.cpp.o
+
+.PHONY : src/math.o
+
+# target to build an object file
+src/math.cpp.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/math.cpp.o
+.PHONY : src/math.cpp.o
+
+src/math.i: src/math.cpp.i
+
+.PHONY : src/math.i
+
+# target to preprocess a source file
+src/math.cpp.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/math.cpp.i
+.PHONY : src/math.cpp.i
+
+src/math.s: src/math.cpp.s
+
+.PHONY : src/math.s
+
+# target to generate assembly for a file
+src/math.cpp.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/math.cpp.s
+.PHONY : src/math.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -590,6 +617,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/math.o"
+	@echo "... src/math.i"
+	@echo "... src/math.s"
 .PHONY : help
 
 
