@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 set(SOURCE_FILES
-    main.cpp)
+    src/main.cpp)
 
 add_executable(obj_raytracer ${SOURCE_FILES})
 

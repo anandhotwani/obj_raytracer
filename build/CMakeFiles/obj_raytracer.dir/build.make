@@ -57,27 +57,27 @@ include CMakeFiles/obj_raytracer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/obj_raytracer.dir/flags.make
 
-CMakeFiles/obj_raytracer.dir/main.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
-CMakeFiles/obj_raytracer.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obj_raytracer.dir/main.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/main.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/main.cpp
+CMakeFiles/obj_raytracer.dir/src/main.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
+CMakeFiles/obj_raytracer.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obj_raytracer.dir/src/main.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/src/main.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp
 
-CMakeFiles/obj_raytracer.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obj_raytracer.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/main.cpp > CMakeFiles/obj_raytracer.dir/main.cpp.i
+CMakeFiles/obj_raytracer.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obj_raytracer.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp > CMakeFiles/obj_raytracer.dir/src/main.cpp.i
 
-CMakeFiles/obj_raytracer.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obj_raytracer.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/main.cpp -o CMakeFiles/obj_raytracer.dir/main.cpp.s
+CMakeFiles/obj_raytracer.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obj_raytracer.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp -o CMakeFiles/obj_raytracer.dir/src/main.cpp.s
 
 # Object files for target obj_raytracer
 obj_raytracer_OBJECTS = \
-"CMakeFiles/obj_raytracer.dir/main.cpp.o"
+"CMakeFiles/obj_raytracer.dir/src/main.cpp.o"
 
 # External object files for target obj_raytracer
 obj_raytracer_EXTERNAL_OBJECTS =
 
-obj_raytracer: CMakeFiles/obj_raytracer.dir/main.cpp.o
+obj_raytracer: CMakeFiles/obj_raytracer.dir/src/main.cpp.o
 obj_raytracer: CMakeFiles/obj_raytracer.dir/build.make
 obj_raytracer: CMakeFiles/obj_raytracer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable obj_raytracer"
