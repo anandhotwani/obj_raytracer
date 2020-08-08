@@ -574,6 +574,87 @@ src/math.cpp.s:
 	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/math.cpp.s
 .PHONY : src/math.cpp.s
 
+src/scene.o: src/scene.cpp.o
+
+.PHONY : src/scene.o
+
+# target to build an object file
+src/scene.cpp.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/scene.cpp.o
+.PHONY : src/scene.cpp.o
+
+src/scene.i: src/scene.cpp.i
+
+.PHONY : src/scene.i
+
+# target to preprocess a source file
+src/scene.cpp.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/scene.cpp.i
+.PHONY : src/scene.cpp.i
+
+src/scene.s: src/scene.cpp.s
+
+.PHONY : src/scene.s
+
+# target to generate assembly for a file
+src/scene.cpp.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/scene.cpp.s
+.PHONY : src/scene.cpp.s
+
+src/shape.o: src/shape.cpp.o
+
+.PHONY : src/shape.o
+
+# target to build an object file
+src/shape.cpp.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/shape.cpp.o
+.PHONY : src/shape.cpp.o
+
+src/shape.i: src/shape.cpp.i
+
+.PHONY : src/shape.i
+
+# target to preprocess a source file
+src/shape.cpp.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/shape.cpp.i
+.PHONY : src/shape.cpp.i
+
+src/shape.s: src/shape.cpp.s
+
+.PHONY : src/shape.s
+
+# target to generate assembly for a file
+src/shape.cpp.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/shape.cpp.s
+.PHONY : src/shape.cpp.s
+
+src/sphere.o: src/sphere.cpp.o
+
+.PHONY : src/sphere.o
+
+# target to build an object file
+src/sphere.cpp.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o
+.PHONY : src/sphere.cpp.o
+
+src/sphere.i: src/sphere.cpp.i
+
+.PHONY : src/sphere.i
+
+# target to preprocess a source file
+src/sphere.cpp.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/sphere.cpp.i
+.PHONY : src/sphere.cpp.i
+
+src/sphere.s: src/sphere.cpp.s
+
+.PHONY : src/sphere.s
+
+# target to generate assembly for a file
+src/sphere.cpp.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/sphere.cpp.s
+.PHONY : src/sphere.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -620,6 +701,15 @@ help:
 	@echo "... src/math.o"
 	@echo "... src/math.i"
 	@echo "... src/math.s"
+	@echo "... src/scene.o"
+	@echo "... src/scene.i"
+	@echo "... src/scene.s"
+	@echo "... src/shape.o"
+	@echo "... src/shape.i"
+	@echo "... src/shape.s"
+	@echo "... src/sphere.o"
+	@echo "... src/sphere.i"
+	@echo "... src/sphere.s"
 .PHONY : help
 
 

@@ -6,6 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/main.cpp.o"
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/math.cpp.o"
+  "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/scene.cpp.o"
+  "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/shape.cpp.o"
+  "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

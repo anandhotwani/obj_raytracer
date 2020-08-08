@@ -1,12 +1,27 @@
 [
 {
   "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
-  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/main.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp",
-  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp"
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/shape.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.cpp",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.cpp"
+},
+{
+  "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/scene.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.cpp",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.cpp"
+},
+{
+  "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.cpp",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.cpp"
 },
 {
   "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
   "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/math.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp",
   "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp"
+},
+{
+  "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/main.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp"
 }
 ]

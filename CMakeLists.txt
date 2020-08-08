@@ -14,8 +14,11 @@ endif()
 
 
 set(SOURCE_FILES
-    src/main.cpp
-    src/math.cpp)
+    src/shape.cpp
+    src/scene.cpp
+    src/sphere.cpp
+    src/math.cpp
+    src/main.cpp)
 
 add_executable(obj_raytracer ${SOURCE_FILES})
 

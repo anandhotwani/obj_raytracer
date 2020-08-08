@@ -1,7 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
+#include <memory>
+
 #include "../src/math.hpp"
+#include "../src/sphere.hpp"
+#include "../src/scene.hpp"
 
 struct Options {
     uint32_t width;
@@ -22,14 +26,13 @@ float ray_sphere_intersection(const Vector3f& center, float radius, const Ray& r
     }
 }
 
-Vector3f cast_ray(const Ray& r) {
-    float hit = ray_sphere_intersection(Vector3f(0.0f, 0.0f, -1.0f), 0.5f, r);
-    if (hit > 0.0f) {
-        Vector3f normal = glm::normalize((r.o + hit * r.d) - Vector3f(0.0f, 0.0f, -1.0f));
-        return Vector3f(glm::dot(normal, -r.d));
+Vector3f cast_ray(const Ray& r, const Shape& scene) {
+    SurfaceInteraction interaction;
+    if (scene.intersect(r, interaction)) {
+        return 0.18f * (interaction.Ng + Vector3f(1.0f));
     }
-    float t = 0.5f * (r.d.y + 1.0f);
-    return Vector3f(0.44f);//lerp(Vector3f(1.0f, 1.0f, 1.0f), Vector3f(0.5f, 0.7f, 1.0f), t);
+
+    return Vector3f(0.18f);
 }
 
 int main() {
@@ -38,6 +41,13 @@ int main() {
     options.width   = 1024;
     options.height  = 429;
     options.fov     = 130.0f;
+
+    Scene scene;
+
+    Vector3f pos = Vector3f(0.1f, 0.0f, -1.0f);
+    float rad = 0.5f;
+    scene.Add(std::make_shared<Sphere>(pos, rad));
+    //scene.Add(std::make_shared<Sphere>(Vector3f(0.0f, -100.5f, -1.0f), 100.0f));
 
     std::ofstream ofs("OUT.ppm", std::ios::out | std::ios::binary);
     ofs << "P6\n" << options.width << " " << options.height << "\n255\n";
@@ -56,8 +66,8 @@ int main() {
             float u = (2.0f * (i + 0.5f) / (float)options.width - 1.0f) * scale;
             float v = (1.0f - 2.0f * (j + 0.5f) / (float)options.height) * scale * 1.0f / image_aspect_ratio;
             //Vector3f colour = Vector3f(u, v, 0.18f);
-            Ray ray = Ray(Vector3f(0.0f), Vector3f(u, v, -1.0f));
-            Vector3f colour = cast_ray(ray);
+            Ray ray = Ray(Vector3f(0.0f), Vector3f(u, v, -1.0f), 0.001f, 9999.9f);
+            Vector3f colour = cast_ray(ray, scene);
             
             char r = (char)(255.99f * colour.x);
             char g = (char)(255.99f * colour.y);
