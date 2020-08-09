@@ -6,30 +6,19 @@
 #include "../src/math.hpp"
 #include "../src/sphere.hpp"
 #include "../src/scene.hpp"
+#include "../src/camera.hpp"
 
 struct Options {
     uint32_t width;
     uint32_t height;
     float fov;
+    Matrix4x4f c2w;
 };
-
-float ray_sphere_intersection(const Vector3f& center, float radius, const Ray& r) {
-    Vector3f oc = r.o - center;
-    float a = glm::dot(r.d, r.d);
-    float b = 2.0f * glm::dot(oc, r.d);
-    float c = glm::dot(oc, oc) - radius * radius;
-    float discriminant = b * b - 4 * a * c;
-    if (discriminant < 0.0f) {
-        return -1.0f;
-    } else {
-        return (-b - sqrt(discriminant)) / (2.0f * a);
-    }
-}
 
 Vector3f cast_ray(const Ray& r, const Shape& scene) {
     SurfaceInteraction interaction;
     if (scene.intersect(r, interaction)) {
-        return 0.18f * (interaction.Ng + Vector3f(1.0f));
+        return Vector3f(glm::dot(interaction.Ng, -r.d));
     }
 
     return Vector3f(0.18f);
@@ -40,38 +29,45 @@ int main() {
     Options options;
     options.width   = 1024;
     options.height  = 429;
-    options.fov     = 130.0f;
+    options.fov     = 48.65f;
+    options.c2w = Matrix4x4f(    1.0f, 0.0f, 0.0f, 0.0f,
+                                 0.0,  1.0f, 0.0f, 0.0f,
+                                 0.0f, 0.0f, 1.0f, 0.0f,
+                                 0.0f, 0.0f, 3.0f, 1.0f);   // 4x4 Matrix
 
+    Camera camera(options.width, options.height, options.fov, options.c2w);
     Scene scene;
 
-    Vector3f pos = Vector3f(0.1f, 0.0f, -1.0f);
-    float rad = 0.5f;
+    Vector3f pos = Vector3f(0.0f, 0.0f, -5.0f);
+    float rad = 0.75f;
     scene.Add(std::make_shared<Sphere>(pos, rad));
-    //scene.Add(std::make_shared<Sphere>(Vector3f(0.0f, -100.5f, -1.0f), 100.0f));
+
+    Vector3f pos2 = Vector3f(2.0f, 0.0f, -5.0f);
+    float rad2 = 0.35f;
+    scene.Add(std::make_shared<Sphere>(pos2, rad2));
+
+    Vector3f pos3 = Vector3f(-2.2f, 0.0f, -5.0f);
+    float rad3 = 1.25f;
+    scene.Add(std::make_shared<Sphere>(pos3, rad3));
 
     std::ofstream ofs("OUT.ppm", std::ios::out | std::ios::binary);
     ofs << "P6\n" << options.width << " " << options.height << "\n255\n";
 
-    float scale = tan(deg2rad(options.fov * 0.5f));
-    float image_aspect_ratio = options.width / (float)options.height;
-    
+    const static float gamma = 1.0f / 2.2f;   
+
     // Time keeping
     auto start = std::chrono::system_clock::now();
     std::cout<<"Rendering image ... \n";
     for (uint32_t j = 0; j < options.height; ++j) {
-        std::cout<<"Scanlines remaining : "<<options.height - j<<"\n";
+        //std::cout<<"Scanlines remaining : "<<options.height - j<<"\n";
         for (uint32_t i = 0; i < options.width; ++i) {
-//            float u = float(j) / float(options.height);
-//            float v = float(i) / float(options.width);
-            float u = (2.0f * (i + 0.5f) / (float)options.width - 1.0f) * scale;
-            float v = (1.0f - 2.0f * (j + 0.5f) / (float)options.height) * scale * 1.0f / image_aspect_ratio;
-            //Vector3f colour = Vector3f(u, v, 0.18f);
-            Ray ray = Ray(Vector3f(0.0f), Vector3f(u, v, -1.0f), 0.001f, 9999.9f);
+
+            Ray ray = camera.get_ray(i, j);          
             Vector3f colour = cast_ray(ray, scene);
             
-            char r = (char)(255.99f * colour.x);
-            char g = (char)(255.99f * colour.y);
-            char b = (char)(255.99f * colour.z);
+            char r = (char)(255.99f * powf(colour.x, gamma));
+            char g = (char)(255.99f * powf(colour.y, gamma));
+            char b = (char)(255.99f * powf(colour.z, gamma));
             
             ofs << r << g << b;
             
@@ -88,7 +84,6 @@ int main() {
     std::time_t end_time = std::chrono::system_clock::to_time_t(end);
     std::chrono::duration<double> elapsed_seconds = end-start;
     std::cout << "Program completed on " << std::ctime(&end_time) << "\nTime taken to render : " << elapsed_seconds.count() << "s\n\n";
-    //Time keeping
     
     return EXIT_SUCCESS;
 }

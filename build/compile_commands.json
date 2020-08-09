@@ -6,6 +6,11 @@
 },
 {
   "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/camera.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.cpp",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.cpp"
+},
+{
+  "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
   "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/scene.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.cpp",
   "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.cpp"
 },

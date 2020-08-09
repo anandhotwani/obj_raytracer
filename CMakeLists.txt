@@ -15,6 +15,7 @@ endif()
 
 set(SOURCE_FILES
     src/shape.cpp
+    src/camera.cpp
     src/scene.cpp
     src/sphere.cpp
     src/math.cpp

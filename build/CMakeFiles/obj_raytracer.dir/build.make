@@ -70,9 +70,22 @@ CMakeFiles/obj_raytracer.dir/src/shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obj_raytracer.dir/src/shape.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.cpp -o CMakeFiles/obj_raytracer.dir/src/shape.cpp.s
 
+CMakeFiles/obj_raytracer.dir/src/camera.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
+CMakeFiles/obj_raytracer.dir/src/camera.cpp.o: ../src/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obj_raytracer.dir/src/camera.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/src/camera.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.cpp
+
+CMakeFiles/obj_raytracer.dir/src/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obj_raytracer.dir/src/camera.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.cpp > CMakeFiles/obj_raytracer.dir/src/camera.cpp.i
+
+CMakeFiles/obj_raytracer.dir/src/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obj_raytracer.dir/src/camera.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.cpp -o CMakeFiles/obj_raytracer.dir/src/camera.cpp.s
+
 CMakeFiles/obj_raytracer.dir/src/scene.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
 CMakeFiles/obj_raytracer.dir/src/scene.cpp.o: ../src/scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obj_raytracer.dir/src/scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obj_raytracer.dir/src/scene.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/src/scene.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.cpp
 
 CMakeFiles/obj_raytracer.dir/src/scene.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/obj_raytracer.dir/src/scene.cpp.s: cmake_force
 
 CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
 CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o: ../src/sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.cpp
 
 CMakeFiles/obj_raytracer.dir/src/sphere.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/obj_raytracer.dir/src/sphere.cpp.s: cmake_force
 
 CMakeFiles/obj_raytracer.dir/src/math.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
 CMakeFiles/obj_raytracer.dir/src/math.cpp.o: ../src/math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/obj_raytracer.dir/src/math.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/obj_raytracer.dir/src/math.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/src/math.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp
 
 CMakeFiles/obj_raytracer.dir/src/math.cpp.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/obj_raytracer.dir/src/math.cpp.s: cmake_force
 
 CMakeFiles/obj_raytracer.dir/src/main.cpp.o: CMakeFiles/obj_raytracer.dir/flags.make
 CMakeFiles/obj_raytracer.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/obj_raytracer.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/obj_raytracer.dir/src/main.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obj_raytracer.dir/src/main.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp
 
 CMakeFiles/obj_raytracer.dir/src/main.cpp.i: cmake_force
@@ -125,6 +138,7 @@ CMakeFiles/obj_raytracer.dir/src/main.cpp.s: cmake_force
 # Object files for target obj_raytracer
 obj_raytracer_OBJECTS = \
 "CMakeFiles/obj_raytracer.dir/src/shape.cpp.o" \
+"CMakeFiles/obj_raytracer.dir/src/camera.cpp.o" \
 "CMakeFiles/obj_raytracer.dir/src/scene.cpp.o" \
 "CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o" \
 "CMakeFiles/obj_raytracer.dir/src/math.cpp.o" \
@@ -134,13 +148,14 @@ obj_raytracer_OBJECTS = \
 obj_raytracer_EXTERNAL_OBJECTS =
 
 obj_raytracer: CMakeFiles/obj_raytracer.dir/src/shape.cpp.o
+obj_raytracer: CMakeFiles/obj_raytracer.dir/src/camera.cpp.o
 obj_raytracer: CMakeFiles/obj_raytracer.dir/src/scene.cpp.o
 obj_raytracer: CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o
 obj_raytracer: CMakeFiles/obj_raytracer.dir/src/math.cpp.o
 obj_raytracer: CMakeFiles/obj_raytracer.dir/src/main.cpp.o
 obj_raytracer: CMakeFiles/obj_raytracer.dir/build.make
 obj_raytracer: CMakeFiles/obj_raytracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable obj_raytracer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable obj_raytracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obj_raytracer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

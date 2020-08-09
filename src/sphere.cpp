@@ -1,4 +1,5 @@
 #include "../src/sphere.hpp"
+#include <iostream>
 
 bool Sphere::intersect(const Ray &r, SurfaceInteraction &interaction) const {
     
