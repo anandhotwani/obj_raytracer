@@ -50,7 +50,7 @@ int main() {
     float rad3 = 1.25f;
     scene.Add(std::make_shared<Sphere>(pos3, rad3));
 
-    std::ofstream ofs("OUT.ppm", std::ios::out | std::ios::binary);
+    std::ofstream ofs("render.1001.ppm", std::ios::out | std::ios::binary);
     ofs << "P6\n" << options.width << " " << options.height << "\n255\n";
 
     const static float gamma = 1.0f / 2.2f;   
@@ -79,6 +79,7 @@ int main() {
     std::cout<<"Rendering complete! \n";
     
     ofs.close();
+    scene.Clear();
     
     // Time keeping
     std::time_t end_time = std::chrono::system_clock::to_time_t(end);

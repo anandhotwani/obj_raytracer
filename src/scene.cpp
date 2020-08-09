@@ -2,6 +2,7 @@
 
 void Scene::Clear() {
     objects.clear();
+    objects.shrink_to_fit();
 }
 
 void Scene::Add(std::shared_ptr<Shape> object) {
