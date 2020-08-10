@@ -682,6 +682,33 @@ src/sphere.cpp.s:
 	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/sphere.cpp.s
 .PHONY : src/sphere.cpp.s
 
+src/triangle.o: src/triangle.cpp.o
+
+.PHONY : src/triangle.o
+
+# target to build an object file
+src/triangle.cpp.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/triangle.cpp.o
+.PHONY : src/triangle.cpp.o
+
+src/triangle.i: src/triangle.cpp.i
+
+.PHONY : src/triangle.i
+
+# target to preprocess a source file
+src/triangle.cpp.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/triangle.cpp.i
+.PHONY : src/triangle.cpp.i
+
+src/triangle.s: src/triangle.cpp.s
+
+.PHONY : src/triangle.s
+
+# target to generate assembly for a file
+src/triangle.cpp.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/triangle.cpp.s
+.PHONY : src/triangle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -740,6 +767,9 @@ help:
 	@echo "... src/sphere.o"
 	@echo "... src/sphere.i"
 	@echo "... src/sphere.s"
+	@echo "... src/triangle.o"
+	@echo "... src/triangle.i"
+	@echo "... src/triangle.s"
 .PHONY : help
 
 

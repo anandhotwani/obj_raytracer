@@ -18,6 +18,7 @@ set(SOURCE_FILES
     src/camera.cpp
     src/scene.cpp
     src/sphere.cpp
+    src/triangle.cpp
     src/math.cpp
     src/main.cpp)
 

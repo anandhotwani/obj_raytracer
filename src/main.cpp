@@ -5,6 +5,7 @@
 
 #include "../src/math.hpp"
 #include "../src/sphere.hpp"
+#include "../src/triangle.hpp"
 #include "../src/scene.hpp"
 #include "../src/camera.hpp"
 
@@ -33,7 +34,7 @@ int main() {
     options.c2w = Matrix4x4f(    1.0f, 0.0f, 0.0f, 0.0f,
                                  0.0,  1.0f, 0.0f, 0.0f,
                                  0.0f, 0.0f, 1.0f, 0.0f,
-                                 0.0f, 0.0f, 3.0f, 1.0f);   // 4x4 Matrix
+                                 0.0f, 0.1f, 5.0f, 1.0f);   // 4x4 Matrix
 
     Camera camera(options.width, options.height, options.fov, options.c2w);
     Scene scene;
@@ -42,13 +43,11 @@ int main() {
     float rad = 0.75f;
     scene.Add(std::make_shared<Sphere>(pos, rad));
 
-    Vector3f pos2 = Vector3f(2.0f, 0.0f, -5.0f);
-    float rad2 = 0.35f;
-    scene.Add(std::make_shared<Sphere>(pos2, rad2));
+    Vector3f v0 = Vector3f(-0.5f, -0.25f, 0.0f);
+    Vector3f v1 = Vector3f(0.5f, -0.25f, 0.0f);
+    Vector3f v2 = Vector3f(0.0f, 0.85f, 0.0f);
+    scene.Add(std::make_shared<Triangle>(v0, v1, v2));
 
-    Vector3f pos3 = Vector3f(-2.2f, 0.0f, -5.0f);
-    float rad3 = 1.25f;
-    scene.Add(std::make_shared<Sphere>(pos3, rad3));
 
     std::ofstream ofs("render.1001.ppm", std::ios::out | std::ios::binary);
     ofs << "P6\n" << options.width << " " << options.height << "\n255\n";

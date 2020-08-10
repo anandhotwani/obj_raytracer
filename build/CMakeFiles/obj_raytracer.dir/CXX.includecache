@@ -23,6 +23,8 @@ memory
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.hpp
 ../src/sphere.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.hpp
+../src/triangle.hpp
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/triangle.hpp
 ../src/scene.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.hpp
 ../src/camera.hpp
@@ -51,6 +53,10 @@ vector
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.hpp
 
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.hpp
+../src/shape.hpp
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.hpp
+
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/triangle.hpp
 ../src/shape.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.hpp
 
