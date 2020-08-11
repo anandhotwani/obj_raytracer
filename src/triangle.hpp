@@ -3,6 +3,13 @@
 
 #include "../src/shape.hpp"
 
+struct Vertex {
+public:
+    Vector3f P;
+    Vector3f Ng;
+    Vector2f UV;
+};
+
 class Triangle : public Shape {
 public:
     Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2) {

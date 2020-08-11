@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/external/tiny_obj_loader.h
+string
+-
+vector
+-
+map
+-
+
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.hpp
 ../src/math.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.hpp
@@ -25,6 +33,8 @@ memory
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.hpp
 ../src/triangle.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/triangle.hpp
+../src/trianglemesh.hpp
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/trianglemesh.hpp
 ../src/scene.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/scene.hpp
 ../src/camera.hpp
@@ -59,6 +69,16 @@ vector
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/triangle.hpp
 ../src/shape.hpp
 /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.hpp
+
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/trianglemesh.hpp
+../src/triangle.hpp
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/triangle.hpp
+../external/tiny_obj_loader.h
+/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/external/tiny_obj_loader.h
+iostream
+-
+vector
+-
 
 /usr/local/include/glm/common.hpp
 detail/qualifier.hpp

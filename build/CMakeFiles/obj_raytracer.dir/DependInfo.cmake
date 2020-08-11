@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/external/tiny_obj_loader.cc" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/external/tiny_obj_loader.cc.o"
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/camera.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/camera.cpp.o"
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/main.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/main.cpp.o"
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/math.cpp.o"
@@ -11,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/shape.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/shape.cpp.o"
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/sphere.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o"
   "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/triangle.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/triangle.cpp.o"
+  "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/trianglemesh.cpp" "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build/CMakeFiles/obj_raytracer.dir/src/trianglemesh.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

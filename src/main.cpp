@@ -6,6 +6,7 @@
 #include "../src/math.hpp"
 #include "../src/sphere.hpp"
 #include "../src/triangle.hpp"
+#include "../src/trianglemesh.hpp"
 #include "../src/scene.hpp"
 #include "../src/camera.hpp"
 
@@ -30,11 +31,11 @@ int main() {
     Options options;
     options.width   = 1024;
     options.height  = 429;
-    options.fov     = 48.65f;
+    options.fov     = 68.65f;
     options.c2w = Matrix4x4f(    1.0f, 0.0f, 0.0f, 0.0f,
                                  0.0,  1.0f, 0.0f, 0.0f,
                                  0.0f, 0.0f, 1.0f, 0.0f,
-                                 0.0f, 0.1f, 5.0f, 1.0f);   // 4x4 Matrix
+                                 0.0f, 1.0f, 7.0f, 1.0f);   // 4x4 Matrix
 
     Camera camera(options.width, options.height, options.fov, options.c2w);
     Scene scene;
@@ -47,6 +48,10 @@ int main() {
     Vector3f v1 = Vector3f(0.5f, -0.25f, 0.0f);
     Vector3f v2 = Vector3f(0.0f, 0.85f, 0.0f);
     scene.Add(std::make_shared<Triangle>(v0, v1, v2));
+
+    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/sphere.obj"));
+
+
 
 
     std::ofstream ofs("render.1001.ppm", std::ios::out | std::ios::binary);

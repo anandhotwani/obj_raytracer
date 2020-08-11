@@ -26,6 +26,16 @@
 },
 {
   "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/trianglemesh.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/trianglemesh.cpp",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/trianglemesh.cpp"
+},
+{
+  "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
+  "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/external/tiny_obj_loader.cc.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/external/tiny_obj_loader.cc",
+  "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/external/tiny_obj_loader.cc"
+},
+{
+  "directory": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/build",
   "command": "/usr/bin/clang++   -I/usr/local/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/obj_raytracer.dir/src/math.cpp.o -c /Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp",
   "file": "/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/src/math.cpp"
 },

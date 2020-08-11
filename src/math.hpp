@@ -7,6 +7,7 @@
 #include <memory>
 
 // Vector3 and Matrix4x4 setup
+typedef glm::vec2 Vector2f;
 typedef glm::vec3 Vector3f;
 typedef glm::vec4 Vector4f;
 typedef glm::mat4 Matrix4x4f;
@@ -44,8 +45,8 @@ public:
 public:
     Vector3f o;
     Vector3f d;
-    float t_min;
-    float t_max;
+    mutable float t_min;
+    mutable float t_max;
 
 };
 

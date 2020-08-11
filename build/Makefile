@@ -520,6 +520,33 @@ Experimental/fast:
 	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
 .PHONY : Experimental/fast
 
+external/tiny_obj_loader.o: external/tiny_obj_loader.cc.o
+
+.PHONY : external/tiny_obj_loader.o
+
+# target to build an object file
+external/tiny_obj_loader.cc.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/external/tiny_obj_loader.cc.o
+.PHONY : external/tiny_obj_loader.cc.o
+
+external/tiny_obj_loader.i: external/tiny_obj_loader.cc.i
+
+.PHONY : external/tiny_obj_loader.i
+
+# target to preprocess a source file
+external/tiny_obj_loader.cc.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/external/tiny_obj_loader.cc.i
+.PHONY : external/tiny_obj_loader.cc.i
+
+external/tiny_obj_loader.s: external/tiny_obj_loader.cc.s
+
+.PHONY : external/tiny_obj_loader.s
+
+# target to generate assembly for a file
+external/tiny_obj_loader.cc.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/external/tiny_obj_loader.cc.s
+.PHONY : external/tiny_obj_loader.cc.s
+
 src/camera.o: src/camera.cpp.o
 
 .PHONY : src/camera.o
@@ -709,6 +736,33 @@ src/triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/triangle.cpp.s
 .PHONY : src/triangle.cpp.s
 
+src/trianglemesh.o: src/trianglemesh.cpp.o
+
+.PHONY : src/trianglemesh.o
+
+# target to build an object file
+src/trianglemesh.cpp.o:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/trianglemesh.cpp.o
+.PHONY : src/trianglemesh.cpp.o
+
+src/trianglemesh.i: src/trianglemesh.cpp.i
+
+.PHONY : src/trianglemesh.i
+
+# target to preprocess a source file
+src/trianglemesh.cpp.i:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/trianglemesh.cpp.i
+.PHONY : src/trianglemesh.cpp.i
+
+src/trianglemesh.s: src/trianglemesh.cpp.s
+
+.PHONY : src/trianglemesh.s
+
+# target to generate assembly for a file
+src/trianglemesh.cpp.s:
+	$(MAKE) -f CMakeFiles/obj_raytracer.dir/build.make CMakeFiles/obj_raytracer.dir/src/trianglemesh.cpp.s
+.PHONY : src/trianglemesh.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -749,6 +803,9 @@ help:
 	@echo "... ExperimentalMemCheck"
 	@echo "... Continuous"
 	@echo "... Experimental"
+	@echo "... external/tiny_obj_loader.o"
+	@echo "... external/tiny_obj_loader.i"
+	@echo "... external/tiny_obj_loader.s"
 	@echo "... src/camera.o"
 	@echo "... src/camera.i"
 	@echo "... src/camera.s"
@@ -770,6 +827,9 @@ help:
 	@echo "... src/triangle.o"
 	@echo "... src/triangle.i"
 	@echo "... src/triangle.s"
+	@echo "... src/trianglemesh.o"
+	@echo "... src/trianglemesh.i"
+	@echo "... src/trianglemesh.s"
 .PHONY : help
 
 
