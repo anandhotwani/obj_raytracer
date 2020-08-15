@@ -20,9 +20,31 @@ bool Triangle::intersect(const Ray &r, SurfaceInteraction &interaction) const {
              interaction.t = t_temp;
              interaction.p = r.o + interaction.t * r.d;
              Vector3f outward_normal = this->n;
-            interaction.set_face_normal(r, outward_normal);
+             interaction.set_face_normal(r, outward_normal);
+
+             // Barycentric coords
+             Vector3f bary = get_barycentric(interaction.p);
+             interaction.AOV = bary;
+             Vector2f ST = bary.x * uv[0] + bary.y * uv[1] + bary.z * uv[2];
+             interaction.AOV = Vector3f(ST.x, ST.y, 0.0f);
+             //interaction.AOV = (bary.x * N[0]) + (bary.y * N[1]) + bary.z * N[2];
+
              return true;
          }
      }
      return false;
+}
+
+Vector3f Triangle::get_barycentric(Vector3f &p) const {
+    Vector3f v2_ = p - v0;
+    float d00 = glm::dot(e1, e1);
+    float d01 = glm::dot(e1, e2);
+    float d11 = glm::dot(e2, e2);
+    float d20 = glm::dot(v2_, e1);
+    float d21 = glm::dot(v2_, e2);
+    float d = d00 * d11 - d01 * d01;
+    float v = (d11 * d20 - d01 * d21) / d;
+    float w = (d00 * d21 - d01 * d20) / d;
+    float u = 1 - v - w;
+    return Vector3f(u, v, w);
 }

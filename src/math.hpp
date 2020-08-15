@@ -56,6 +56,8 @@ struct SurfaceInteraction {
     Vector3f Ng;            // Geometric normal
     float t;                // Distance along ray for intersection
     bool front_facing;      // Determine if normal is aligned with ray (or against)
+    Vector3f AOV;           // Custom write
+    Vector2f st;
 
     inline void set_face_normal(const Ray& r, const Vector3f& outward_normal) {
         front_facing = glm::dot(r.d, outward_normal) < 0.0f;
