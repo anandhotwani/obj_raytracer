@@ -6,7 +6,7 @@
 #include "../src/math.hpp"
 #include "../src/sphere.hpp"
 #include "../src/triangle.hpp"
-//#include "../src/trianglemesh.hpp"
+#include "../src/trianglemesh.hpp"
 #include "../src/scene.hpp"
 #include "../src/camera.hpp"
 
@@ -20,7 +20,7 @@ struct Options {
 Vector3f cast_ray(const Ray& r, const Shape& scene) {
     SurfaceInteraction interaction;
     if (scene.intersect(r, interaction)) {
-        //return Vector3f(glm::dot(interaction.Ng, -r.d));
+        return Vector3f(glm::dot(interaction.Ng, -r.d));
         return Vector3f(interaction.AOV);
     }
 
@@ -36,7 +36,7 @@ int main() {
     options.c2w = Matrix4x4f(    1.0f, 0.0f, 0.0f, 0.0f,
                                  0.0,  1.0f, 0.0f, 0.0f,
                                  0.0f, 0.0f, 1.0f, 0.0f,
-                                 0.0f, 1.0f, 7.0f, 1.0f);   // 4x4 Matrix
+                                 0.0f, 1.0f, 10.0f, 1.0f);   // 4x4 Matrix
 
     Camera camera(options.width, options.height, options.fov, options.c2w);
     Scene scene;
@@ -64,9 +64,9 @@ int main() {
     vert2.Ng = Vector3f(-0.33f, -0.33f, -0.33f);
     vert2.UV = Vector2f(1.0f, 0.0f);
 
-    scene.Add(std::make_shared<Triangle>(vert0, vert1, vert2));
+    //scene.Add(std::make_shared<Triangle>(vert0, vert1, vert2));
 
-    //scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/sphere.obj"));
+    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/torus.obj"));
 
 
 

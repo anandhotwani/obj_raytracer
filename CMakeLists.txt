@@ -19,6 +19,7 @@ set(SOURCE_FILES
     src/scene.cpp
     src/sphere.cpp
     src/triangle.cpp
+    src/trianglemesh.cpp
     external/tiny_obj_loader.cc
     src/math.cpp
     src/main.cpp)

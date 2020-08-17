@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/obj_raytracer.dir/src/shape.cpp.o"
   "CMakeFiles/obj_raytracer.dir/src/sphere.cpp.o"
   "CMakeFiles/obj_raytracer.dir/src/triangle.cpp.o"
+  "CMakeFiles/obj_raytracer.dir/src/trianglemesh.cpp.o"
   "obj_raytracer"
   "obj_raytracer.pdb"
 )
