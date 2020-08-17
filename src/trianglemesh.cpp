@@ -15,36 +15,91 @@ TriangleMesh::TriangleMesh(const char *filepath) {
     std::string warnings;
     std::string errors;
 
-    tinyobj::LoadObj(&attributes, &shapes, &materials, &warnings, &errors, inputfile.c_str(), mtlbasepath.c_str());
+    bool ret = tinyobj::LoadObj(&attributes, &shapes, &materials, &warnings, &errors, inputfile.c_str(), mtlbasepath.c_str());
+    if (!warnings.empty()) {
+    std::cout << warnings << std::endl;
+    }
+
+    if (!errors.empty()) {
+    std::cerr << errors << std::endl;
+    }
+
+    if (!ret) {
+    exit(1);
+    }
 
     std::vector<Vertex> vertices;
-    for (int i = 0; i < shapes.size(); ++i) {
-        tinyobj::shape_t &shape = shapes[i];
-        tinyobj::mesh_t &mesh = shape.mesh;
-        for (int j = 0; j < mesh.indices.size(); ++j) {
-            tinyobj::index_t idx = mesh.indices[j];
 
-            Vector3f position = Vector3f(attributes.vertices[idx.vertex_index * 3],
-                                         attributes.vertices[idx.vertex_index * 3 + 1],
-                                         attributes.vertices[idx.vertex_index * 3 + 2]);
+    // Loop over shapes
+    for (size_t s = 0; s < shapes.size(); s++) {
+    // Loop over faces(polygon)
+    size_t index_offset = 0;
+    for (size_t f = 0; f < shapes[s].mesh.num_face_vertices.size(); f++) {
+        int fv = shapes[s].mesh.num_face_vertices[f];
 
-            Vector3f normal = Vector3f(attributes.vertices[idx.normal_index * 3],
-                                       attributes.vertices[idx.normal_index * 3 + 1],
-                                       attributes.vertices[idx.normal_index * 3 + 2]);
+        // Loop over vertices in the face.
+        for (size_t v = 0; v < fv; v++) {
+        // access to vertex
+        tinyobj::index_t idx = shapes[s].mesh.indices[index_offset + v];
+        tinyobj::real_t vx = attributes.vertices[3*idx.vertex_index+0];
+        tinyobj::real_t vy = attributes.vertices[3*idx.vertex_index+1];
+        tinyobj::real_t vz = attributes.vertices[3*idx.vertex_index+2];
+        tinyobj::real_t nx = attributes.normals[3*idx.normal_index+0];
+        tinyobj::real_t ny = attributes.normals[3*idx.normal_index+1];
+        tinyobj::real_t nz = attributes.normals[3*idx.normal_index+2];
+        tinyobj::real_t tx = attributes.texcoords[2*idx.texcoord_index+0];
+        tinyobj::real_t ty = attributes.texcoords[2*idx.texcoord_index+1];
 
-            std::cout<<"> Normal here is "<<glm::to_string(normal)<<"\n";
+        Vector3f this_normal = Vector3f(nx, ny, nz);
+        std::cout<<"Normal here is "<<glm::to_string(this_normal)<<"\n";
 
-            Vector2f uv_coord = Vector2f(attributes.vertices[idx.texcoord_index * 2],
-                                         attributes.vertices[idx.texcoord_index * 2 + 1]);
-
-            Vertex vert;
-            vert.P = position;
-            vert.Ng = glm::normalize(normal);
-            vert.UV = glm::normalize(uv_coord);
-            vertices.push_back(vert);
-            
+        Vertex vert;
+        vert.P = Vector3f(vx, vy, vz);
+        vert.Ng = Vector3f(nx, ny, nz);
+        vert.UV = Vector2f(tx, ty);
+        vertices.push_back(vert);
+        // Optional: vertex colors
+        // tinyobj::real_t red = attrib.colors[3*idx.vertex_index+0];
+        // tinyobj::real_t green = attrib.colors[3*idx.vertex_index+1];
+        // tinyobj::real_t blue = attrib.colors[3*idx.vertex_index+2];
         }
+        index_offset += fv;
+
+        // per-face material
+        //shapes[s].mesh.material_ids[f];
     }
+    }
+
+
+
+    // std::vector<Vertex> vertices;
+    // for (int i = 0; i < shapes.size(); ++i) {
+    //     tinyobj::shape_t &shape = shapes[i];
+    //     tinyobj::mesh_t &mesh = shape.mesh;
+    //     for (int j = 0; j < mesh.indices.size(); ++j) {
+    //         tinyobj::index_t idx = mesh.indices[j];
+
+    //         Vector3f position = Vector3f(attributes.vertices[idx.vertex_index * 3],
+    //                                      attributes.vertices[idx.vertex_index * 3 + 1],
+    //                                      attributes.vertices[idx.vertex_index * 3 + 2]);
+
+    //         Vector3f normal = Vector3f(attributes.vertices[idx.normal_index * 3],
+    //                                    attributes.vertices[idx.normal_index * 3 + 1],
+    //                                    attributes.vertices[idx.normal_index * 3 + 2]);
+
+    //         std::cout<<"> Normal here is "<<glm::to_string(normal)<<"\n";
+
+    //         Vector2f uv_coord = Vector2f(attributes.vertices[idx.texcoord_index * 2],
+    //                                      attributes.vertices[idx.texcoord_index * 2 + 1]);
+
+    //         Vertex vert;
+    //         vert.P = position;
+    //         vert.Ng = glm::normalize(normal);
+    //         vert.UV = glm::normalize(uv_coord);
+    //         vertices.push_back(vert);
+            
+    //     }
+    // }
 
     for (int i = 0; i < vertices.size(); ++i){
         tris.push_back(std::make_shared<Triangle>(vertices[i * 3], vertices[i * 3 + 1], vertices[i * 3 + 2]));

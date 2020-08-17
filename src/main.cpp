@@ -20,7 +20,7 @@ struct Options {
 Vector3f cast_ray(const Ray& r, const Shape& scene) {
     SurfaceInteraction interaction;
     if (scene.intersect(r, interaction)) {
-        return Vector3f(glm::dot(interaction.Ng, -r.d));
+        //return Vector3f(glm::dot(interaction.Ng, -r.d));
         return Vector3f(interaction.AOV);
     }
 
@@ -66,7 +66,7 @@ int main() {
 
     //scene.Add(std::make_shared<Triangle>(vert0, vert1, vert2));
 
-    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/torus.obj"));
+    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/back.obj"));
 
 
 
