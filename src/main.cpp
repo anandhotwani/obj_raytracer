@@ -36,7 +36,7 @@ int main() {
     options.c2w = Matrix4x4f(    1.0f, 0.0f, 0.0f, 0.0f,
                                  0.0,  1.0f, 0.0f, 0.0f,
                                  0.0f, 0.0f, 1.0f, 0.0f,
-                                 0.0f, 1.0f, 10.0f, 1.0f);   // 4x4 Matrix
+                                 0.0f, 10.0f, 50.0f, 1.0f);   // 4x4 Matrix
 
     Camera camera(options.width, options.height, options.fov, options.c2w);
     Scene scene;
@@ -66,7 +66,7 @@ int main() {
 
     //scene.Add(std::make_shared<Triangle>(vert0, vert1, vert2));
 
-    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/back.obj"));
+    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/dino4.obj"));
 
 
 

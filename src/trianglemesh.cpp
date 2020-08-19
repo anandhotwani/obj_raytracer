@@ -50,8 +50,8 @@ TriangleMesh::TriangleMesh(const char *filepath) {
         tinyobj::real_t tx = attributes.texcoords[2*idx.texcoord_index+0];
         tinyobj::real_t ty = attributes.texcoords[2*idx.texcoord_index+1];
 
-        Vector3f this_normal = Vector3f(nx, ny, nz);
-        std::cout<<"Normal here is "<<glm::to_string(this_normal)<<"\n";
+        // Vector3f this_normal = Vector3f(nx, ny, nz);
+        // std::cout<<"Normal here is "<<glm::to_string(this_normal)<<"\n";
 
         Vertex vert;
         vert.P = Vector3f(vx, vy, vz);
@@ -69,8 +69,6 @@ TriangleMesh::TriangleMesh(const char *filepath) {
         //shapes[s].mesh.material_ids[f];
     }
     }
-
-
 
     // std::vector<Vertex> vertices;
     // for (int i = 0; i < shapes.size(); ++i) {
@@ -99,9 +97,7 @@ TriangleMesh::TriangleMesh(const char *filepath) {
     //         vertices.push_back(vert);
             
     //     }
-    // }
-
-    for (int i = 0; i < vertices.size(); ++i){
+    for (int i = 0; i < vertices.size() / 3; ++i){
         tris.push_back(std::make_shared<Triangle>(vertices[i * 3], vertices[i * 3 + 1], vertices[i * 3 + 2]));
     }
 
