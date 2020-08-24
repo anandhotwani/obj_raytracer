@@ -31,6 +31,7 @@ bool Triangle::intersect(const Ray &r, SurfaceInteraction &interaction) const {
              Vector2f ST = bary.x * uv[0] + bary.y * uv[1] + bary.z * uv[2];
              interaction.AOV = Vector3f(ST.x, ST.y, 0.0f);
              interaction.AOV = glm::normalize((bary.x * N[0]) + (bary.y * N[1]) + bary.z * N[2]);
+             interaction.AOV = bary;
 
              return true;
          }
