@@ -41,7 +41,7 @@ int main() {
     Camera camera(options.width, options.height, options.fov, options.c2w);
     Scene scene;
 
-    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/dino4.obj"));
+    scene.Add(std::make_shared<TriangleMesh>("/Users/anandhotwani/Documents/programming/vscode/obj_raytracer/obj/dino.obj"));
 
     std::ofstream ofs("render.1004.ppm", std::ios::out | std::ios::binary);
     ofs << "P6\n" << options.width << " " << options.height << "\n255\n";
